@@ -8,8 +8,7 @@ import {
   Col,
   Modal,
   Form,
-  Toast,
-  Dropdown
+  Toast
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -17,27 +16,13 @@ import dayjs from "dayjs";
 import countryList from "./countries";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  * as Icons  from '@fortawesome/free-solid-svg-icons'
-import Alert from 'react-s-alert';
-import 'react-s-alert/dist/s-alert-default.css';
 
-// optional - you can choose the effect you want
-import 'react-s-alert/dist/s-alert-css-effects/slide.css';
-import 'react-s-alert/dist/s-alert-css-effects/scale.css';
-import 'react-s-alert/dist/s-alert-css-effects/bouncyflip.css';
-import 'react-s-alert/dist/s-alert-css-effects/flip.css';
-import 'react-s-alert/dist/s-alert-css-effects/genie.css';
-import 'react-s-alert/dist/s-alert-css-effects/jelly.css';
-import 'react-s-alert/dist/s-alert-css-effects/stackslide.css';
-
-
-//import {SortableContainer, SortableElement, arrayMove} from 'react-sortable-hoc';
 
 function App() {
   const [contactList, setContactList] = useState([]);
   const [modalShow, setModalShow] = useState(false);
   const [currentContact, setCurrentContact] = useState({});
   const [isEditing, setIsEditing] = useState(false);
-  const [countrty, setCountrty] = useState("");
   const [show, setShow] = useState(false);
 
   const ContactModal = props => {
